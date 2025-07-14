@@ -1,11 +1,4 @@
-<!-- main starting page -->
-    <!-- one thing worth looking into is the change in certain page elements based on login information. 
-    it's definitely redundant to have an index.ejs and an extra duplicate page just to have different buttons like "profile" or "log in" in the same place. 
-    there's most likely a way to do that, but i don't know how to do it myself. just noting that it should be addressed -->
-
-    <!-- if (random login value === true) then render profile html element instead. idk i'm just yapping at this point -->
-    <!-- pages like index. submit, about, search, all need to dynamically update with this information. profile can just have a static profile button since to
-     view your profile you've gotta be logged in. it doesn't look like we'll have to implement viewing other users' profiles so that's good-->
+<!-- signup page -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,8 +19,7 @@
                 <h2>Hello, Guest</h2>
                 <div id="menu-bar">
                     <form style="margin-left: 15px; width: 20%;" action="/" method="POST">
-                        <!-- color indicating which page the user is on -->
-                        <button style="color: rgb(19, 157, 255);">Recipes</button>
+                        <button>Recipes</button>
                     </form>
                     <form style="margin-left: 15px; width: 30%;" action="/submit" method="POST">
                         <button>Submit a Recipe</button>
@@ -49,8 +41,8 @@
                 </div>
             </div>
             <div id="content">
-                <!-- cards for recipes will go in here -->
-                <h2></h2>
+                <!-- content goes here -->
+                <h2>signup</h2>
             </div>
         </div>
     </body>
