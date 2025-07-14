@@ -19,6 +19,34 @@ app.get("/", async (req, res) => {
     }
 });
 
+app.post("/", (req, res) => {
+    res.render("index.ejs");
+});
+
+app.post("/submit", (req, res) => {
+    res.render("submit.ejs");
+});
+
+app.post("/login", (req, res) => {
+    res.render("login.ejs");
+});
+
+app.post("/profile", (req, res) => {
+    res.render("profile.ejs");
+});
+
+app.post("/signup", (req, res) => {
+    res.render("signup.ejs");
+});
+
+app.post("/about", (req, res) => {
+    res.render("about.ejs");
+});
+
+app.post("/search", (req, res) => {
+    res.render("search.ejs");
+});
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}.`);
 });
