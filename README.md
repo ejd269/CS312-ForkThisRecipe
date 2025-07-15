@@ -25,7 +25,6 @@ Frontend:
 React.js
 HTML5/CSS3
 JavaScript (ES6+)
-[Add other frontend technologies you used]
 Backend:
 
 Node.js
@@ -35,6 +34,7 @@ Tools & Libraries:
 
 [Add specific libraries you used - axios, bcrypt, jwt, etc.]
 [Add development tools - webpack, babel, etc.]
+
 Installation
 Prerequisites
 Node.js (version 14 or higher)
@@ -108,56 +108,10 @@ GET /api/users/:id/recipes - Get user's recipes
 Contributing
 We welcome contributions to ForkThisRecipe! Please follow these steps:
 
-Fork the repository
-Create a feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
-Code Style Guidelines
-Follow ESLint configuration
-Use meaningful variable and function names
-Add comments for complex logic
-Write tests for new features
-Project Structure
-CS312-ForkThisRecipe/
-├── client/                 # Frontend React application
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── styles/
-│   └── package.json
-├── server/                 # Backend Node.js application
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   └── utils/
-├── database/              # Database migrations and seeds
-├── docs/                  # Documentation
-├── tests/                 # Test files
-├── .env.example
-├── .gitignore
-├── package.json
-└── README.md
-Screenshots
-[Add screenshots of your application here]
-
-Demo
-[Add link to live demo if available]
-
-Course Information
-This project was developed as part of CS 312 - [Course Name] at [University Name].
-
-Author: [Your Name] Course: CS 312 Semester: [Semester/Year]
-
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Acknowledgments
 Thanks to the CS 312 teaching staff for guidance and support
-[Add any other acknowledgments]
-[Mention any third-party resources or APIs used]
-Note: This is a student project created for educational purposes.
+
 
