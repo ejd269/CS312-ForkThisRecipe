@@ -30,8 +30,7 @@ Backend:
 
 Node.js
 Express.js
-[Add your database - MongoDB, PostgreSQL, etc.]
-[Add other backend technologies]
+PostgreSQL
 Tools & Libraries:
 
 [Add specific libraries you used - axios, bcrypt, jwt, etc.]
