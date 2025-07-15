@@ -1,117 +1,201 @@
-ForkThisRecipe
-A recipe sharing platform where users can discover, share, and "fork" recipes to create their own variations.
+# ForkThisRecipe
 
-Table of Contents
-Features
-Technologies Used
-Installation
-Usage
-API Documentation
-Contributing
-Project Structure
-License
-Features
-Recipe Discovery: Browse through a collection of user-submitted recipes
-Recipe Sharing: Upload and share your own recipes with the community
-Recipe Forking: Create variations of existing recipes while maintaining attribution
-User Authentication: Secure user registration and login system
-Search & Filter: Find recipes by ingredients, cuisine type, difficulty, or cooking time
-User Profiles: Personal recipe collections and favorite recipes
-Rating & Reviews: Rate and review recipes from other users
-Responsive Design: Works seamlessly on desktop and mobile devices
-Technologies Used
-Frontend:
+**A recipe sharing platform where users can discover, share, and "fork" recipes to create their own variations.**
 
-React.js
-HTML5/CSS3
-JavaScript (ES6+)
-Backend:
+---
 
-Node.js
-Express.js
-PostgreSQL
-Tools & Libraries:
+## Features
 
-[Add specific libraries you used - axios, bcrypt, jwt, etc.]
-[Add development tools - webpack, babel, etc.]
+- **Recipe Discovery**: Browse a collection of user-submitted recipes.
+- **Recipe Sharing**: Upload and share your own creations.
+- **Recipe Forking**: Create variations of existing recipes while maintaining attribution.
+- **User Authentication**: Secure registration and login system.
+- **Search & Filter**: Find recipes by ingredients, cuisine type, difficulty, or cooking time.
+- **User Profiles**: View personal recipe collections and favorites.
+- **Ratings & Reviews**: Leave feedback on recipes.
+- **Responsive Design**: Fully functional on desktop and mobile devices.
 
-Installation
-Prerequisites
-Node.js (version 14 or higher)
-npm or yarn
-[Add database requirements if applicable]
-Setup Instructions
-Clone the repository
-bash
+---
+
+## Technologies Used
+
+### Frontend
+- React.js
+- HTML5/CSS3
+- JavaScript (ES6+)
+
+### Backend
+- Node.js
+- Express.js
+- PostgreSQL
+
+### Tools & Libraries
+- Axios
+- Bcrypt
+- JSON Web Tokens (JWT)
+- dotenv
+- EJS (if used server-side for rendering)
+- Multer (for file uploads)
+- [Include others as used]
+
+---
+
+## Installation
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- PostgreSQL database
+
+### Setup Instructions
+
+1. **Clone the repository:**
+
+```bash
 git clone https://github.com/ejd269/CS312-ForkThisRecipe.git
 cd CS312-ForkThisRecipe
-Install dependencies
-bash
+```
+
+2. **Install dependencies:**
+
+```bash
 npm install
 # or
 yarn install
-Environment Configuration Create a .env file in the root directory and add the following variables:
+```
+
+3. **Environment Configuration:**
+
+Create a `.env` file in the root directory and add the following:
+
+```
 DATABASE_URL=your_database_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=3000
-# Add other environment variables as needed
-Database Setup
-bash
-# Add database setup commands
+```
+
+4. **Database Setup:**
+
+```bash
+# Add your database setup commands here
+# Example:
 npm run db:migrate
 npm run db:seed
-Start the application
-bash
+```
+
+5. **Start the application:**
+
+```bash
 # Development mode
 npm run dev
 
 # Production mode
 npm start
-Access the application Open your browser and navigate to http://localhost:3000
-Usage
-For Users
-Sign Up/Login: Create an account or log in to access all features
-Browse Recipes: Explore the recipe collection on the homepage
-Search: Use the search bar to find specific recipes or ingredients
-View Recipe Details: Click on any recipe to see ingredients, instructions, and reviews
-Fork a Recipe: Click the "Fork" button to create your own version of a recipe
-Share Your Recipe: Use the "Add Recipe" button to share your own creations
-Rate & Review: Leave feedback on recipes you've tried
-For Developers
-bash
+```
+
+6. **Open your browser:**
+
+Visit [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Usage
+
+### For Users
+
+- **Sign Up / Login**: Access full platform features.
+- **Browse Recipes**: Explore user-submitted dishes.
+- **Search**: Quickly find recipes by ingredients or name.
+- **Fork a Recipe**: Build on existing recipes.
+- **Add a Recipe**: Share your own creations.
+- **Rate & Review**: Leave feedback on others' recipes.
+
+### For Developers
+
+```bash
 # Run tests
 npm test
 
-# Run linting
+# Run linter
 npm run lint
 
-# Build for production
+# Build frontend for production
 npm run build
-API Documentation
-Authentication Endpoints
-POST /api/auth/register - Register a new user
-POST /api/auth/login - Login user
-POST /api/auth/logout - Logout user
-Recipe Endpoints
-GET /api/recipes - Get all recipes
-GET /api/recipes/:id - Get specific recipe
-POST /api/recipes - Create new recipe (authenticated)
-PUT /api/recipes/:id - Update recipe (authenticated)
-DELETE /api/recipes/:id - Delete recipe (authenticated)
-POST /api/recipes/:id/fork - Fork a recipe (authenticated)
-User Endpoints
-GET /api/users/:id - Get user profile
-PUT /api/users/:id - Update user profile (authenticated)
-GET /api/users/:id/recipes - Get user's recipes
-[Add more API endpoints as needed]
+```
 
-Contributing
-We welcome contributions to ForkThisRecipe! Please follow these steps:
+---
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## API Documentation
 
-Acknowledgments
-Thanks to the CS 312 teaching staff for guidance and support
+### Authentication
 
+| Method | Endpoint               | Description              |
+|--------|------------------------|--------------------------|
+| POST   | `/api/auth/register`   | Register a new user      |
+| POST   | `/api/auth/login`      | Login user               |
+| POST   | `/api/auth/logout`     | Logout user              |
+
+### 🍽Recipes
+
+| Method | Endpoint                  | Description                      |
+|--------|---------------------------|----------------------------------|
+| GET    | `/api/recipes`            | Get all recipes                  |
+| GET    | `/api/recipes/:id`        | Get a specific recipe            |
+| POST   | `/api/recipes`            | Create a new recipe *(auth)*     |
+| PUT    | `/api/recipes/:id`        | Update recipe *(auth)*           |
+| DELETE | `/api/recipes/:id`        | Delete recipe *(auth)*           |
+| POST   | `/api/recipes/:id/fork`   | Fork a recipe *(auth)*           |
+
+### Users
+
+| Method | Endpoint                    | Description                  |
+|--------|-----------------------------|------------------------------|
+| GET    | `/api/users/:id`            | Get user profile             |
+| PUT    | `/api/users/:id`            | Update user profile *(auth)* |
+| GET    | `/api/users/:id/recipes`    | Get user’s recipes           |
+
+> *Add additional endpoints as implemented.*
+
+---
+
+## Project Structure
+
+```
+CS312-ForkThisRecipe/
+├── index.js                # Main server file
+├── db.js                   # Database connection setup
+├── routes/
+│   └── recipes.js          # API routes for recipes
+├── views/                  # EJS views (if used)
+├── public/                 # Static frontend assets
+├── schema.sql              # SQL schema definition
+├── package.json
+└── .env                    # Environment variables (not committed)
+```
+
+---
+
+## Contributing
+
+We welcome contributions to ForkThisRecipe! To contribute:
+
+1. Fork the repo
+2. Create your feature branch: `git checkout -b my-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-feature`
+5. Open a pull request
+
+Please follow our code style and conventions.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgments
+
+- Thanks to the CS 312 teaching staff for guidance and support throughout the project.
 
