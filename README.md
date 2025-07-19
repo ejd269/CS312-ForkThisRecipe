@@ -14,6 +14,7 @@
 - **User Profiles**: View personal recipe collections and favorites.
 - **Ratings & Reviews**: Leave feedback on recipes.
 - **Responsive Design**: Fully functional on desktop and mobile devices.
+- **Statistics Page**: View total recipes and comments.
 
 ---
 
@@ -109,12 +110,15 @@ Visit [http://localhost:3000](http://localhost:3000)
 - **Fork a Recipe**: Build on existing recipes.
 - **Add a Recipe**: Share your own creations.
 - **Rate & Review**: Leave feedback on others' recipes.
+- **View Stats**: Check overall recipe and comment totals.
 
 ### For Developers
 
 ```bash
 # Run tests
 npm test
+
+# Automated browser tests require Selenium and Chrome
 
 # Run linter
 npm run lint
@@ -198,4 +202,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgments
 
 - Thanks to the CS 312 teaching staff for guidance and support throughout the project.
+
+---
+
 

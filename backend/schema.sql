@@ -4,3 +4,11 @@ CREATE TABLE IF NOT EXISTS recipes (
   ingredients TEXT NOT NULL,
   instructions TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS comments (
+  id SERIAL PRIMARY KEY,
+  recipe_id INTEGER REFERENCES recipes(id) ON DELETE CASCADE,
+  rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+  text TEXT NOT NULL
+);
+
