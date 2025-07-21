@@ -57,11 +57,20 @@
                         </div>
                         <div id="section-two">
                             <label style="margin-bottom: 5px;" for="ingredients">Ingredients:</label>
-                                <textarea style="height: 200px;" name="ingredients" type="text" id="ingredients" required></textarea>
-                            <label style="margin-top: 20px; width: 100%;" for="upload">Upload Image:</label>
+                                <textarea style="height: 18vh;" name="ingredients" type="text" id="ingredients" required></textarea>
+                            <label id="upload" style="margin-top: 20px; width: 100%;" for="upload">Upload Image:</label>
                                 <input type="file" id="upload" name="upload" accept="image">
                             <label style="margin-top: 20px;" for="cook-time">Cooking time:</label>
-                                <!-- dropdown here with options for 10, 20, 30, 45 mins, or 1, 2, 4+ hours. 
+                                <select name="cooktime" id="cooktime">
+                                    <option value="10">10 minutes</option>
+                                    <option value="20">20 minutes</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="45">45 minutes</option>
+                                    <option value="60">1 hour</option>
+                                    <option value="120">2 hours</option>
+                                    <option value="240">4+ hours</option>
+                                </select>
+                                <!-- dropdown here with options for 10, 20, 30, 45 mins, or 1, 2, 4+ hours.
                                         increments don't have to be final, just examples -->
                             <!-- <label for="difficulty">Difficulty Level:</label>-->
                                 <!-- 5 star thing (bootstrap?)-->
@@ -70,7 +79,7 @@
                     <!-- more flexbox divs, ignore -->
                     <div id="right-side">
                         <label style="margin-bottom: 5px;" for="instructions">Instructions:</label>
-                            <textarea style="height: 400px;" name="instructions" type="text" id="instructions" required></textarea>
+                            <textarea style="height: 46vh;" name="instructions" type="text" id="instructions" required></textarea>
                         <button type="submit">Submit</button>
                     </div>
                 </form>
