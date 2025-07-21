@@ -92,3 +92,48 @@ h1 {
     margin-left: 153px;
     margin-right: 0px;
 }
+
+#content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#loginform {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginform input {
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+#loginform button {
+    margin-top: 20px;
+    width: 90px;
+    align-self: center;
+    border-radius: 10px;
+    background-color: rgb(19, 157, 255);
+    color: white;
+    border-width: 0px;
+    height: 30px;
+}
+
+#signupform {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signupform button {
+    border-radius: 10px;
+    width: 90px;
+    background-color: rgb(19, 157, 255);
+    color: white;
+    border-width: 0px;
+    height: 30px;
+}
