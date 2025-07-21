@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS recipes (
   title TEXT NOT NULL,
   ingredients TEXT NOT NULL,
   instructions TEXT NOT NULL,
-  difficulty INTEGER NOT NULL,
+  difficulty INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
   duration INTEGER NOT NULL
 );
 
