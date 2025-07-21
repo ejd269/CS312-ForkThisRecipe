@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: #0070ba;
+    background: linear-gradient(90deg,rgb(73, 112, 214) 0%, rgb(33, 153, 234) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    text-align: left;
+    font-size: 44px;
+    font-weight: 630;
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+
+#main-container {
+    background: white;
+    height: 100%;
+    width: 86%;
+    margin-top: 38px;
+    margin-bottom: auto;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+}
+
+#header {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background: linear-gradient(90deg, #fafafa, #eaeaea);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#header h2 {
+    font-size: 21px;
+    margin-top: -20px;
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+#menu-bar {
+    background: rgb(236, 236, 236);
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 101%;
+    padding: 9px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+#menu-bar button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 4px 8px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+}
+
+#menu-bar button:hover {
+    color: rgb(19, 157, 255);
+}
+
+#blank {
+    width: 60%;
+}
+
+#menu-bar input {
+    display: flex;
+    height: 38px;
+    margin-top: -5px;
+    margin-right: -40px;
+    border-radius: 12px;
+    border-color: transparent;
+}
+
+#search-icon {
+    display: flex;
+    margin-top: -30px;
+    margin-left: 153px;
+    margin-right: 0px;
+}
+
+#content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+#signupform {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#signupform button {
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 90px;
+    background-color: rgb(19, 157, 255);
+    color: white;
+    border-width: 0px;
+    height: 30px;
+    align-self: center;
+}
