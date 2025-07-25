@@ -24,12 +24,24 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/recipes", recipesRouter);
 
 // Routes
-app.get("/", (req, res) => {
-	res.render("index");
+app.get("/", async (req, res) => {
+        try {
+                const { rows } = await pool.query('SELECT id, title FROM recipes ORDER BY id DESC');
+                res.render("index", { recipes: rows });
+        } catch (err) {
+                console.error(err);
+                res.status(500).send("Database error");
+        }
 });
 
-app.post("/", (req, res) => {
-	res.render("index");
+app.post("/", async (req, res) => {
+        try {
+                const { rows } = await pool.query('SELECT id, title FROM recipes ORDER BY id DESC');
+                res.render("index", { recipes: rows });
+        } catch (err) {
+                console.error(err);
+                res.status(500).send("Database error");
+        }
 });
 
 app.post("/submit", (req, res) => {
