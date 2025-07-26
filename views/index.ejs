@@ -41,8 +41,17 @@
                 </div>
             </div>
             <div id="content">
-                <!-- cards for recipes will go in here -->
-                <h2></h2>
+                <% if (recipes && recipes.length) { %>
+                    <div class="recipes">
+                        <% recipes.forEach(r => { %>
+                            <div class="recipe-card">
+                                <h3><a href="/recipes/<%= r.id %>"><%= r.title %></a></h3>
+                            </div>
+                        <% }) %>
+                    </div>
+                <% } else { %>
+                    <p>No recipes found.</p>
+                <% } %>
             </div>
         </div>
     </body>
