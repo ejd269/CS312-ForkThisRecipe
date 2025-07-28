@@ -1,14 +1,11 @@
-html {
-    height: 100%;
-}
-
 body {
     background: #0070ba;
     background: linear-gradient(90deg,rgb(73, 112, 214) 0%, rgb(33, 153, 234) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    padding-top: 38px;
 }
 
 h1 {
@@ -22,13 +19,10 @@ h1 {
 
 #main-container {
     background: white;
-    height: 100%;
     width: 86%;
-    margin-top: 38px;
-    margin-bottom: auto;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-
+    height: 100%;
 }
 
 #header {
@@ -101,7 +95,6 @@ h1 {
 #content h2 {
     margin-left: 9px;
     margin-top: -3px;
-    margin-bottom: 30px;
     font-size: 35px;
 }
 
@@ -123,6 +116,7 @@ h1 {
 }
 
 #section-one {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
@@ -151,10 +145,8 @@ h1 {
 #right-side {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     margin-right: 47px;
     width: 50%;
-    height: 100%;
     border-radius: 13px;
     border-width: 1px;
 }
@@ -179,4 +171,16 @@ h1 {
 
 select {
     border-radius: 10px;
+}
+
+#upload-form {
+    display: flex;
+}
+
+#cooktime-div {
+    display: flex;
+}
+
+#difficulty-div {
+    display: flex;
 }
