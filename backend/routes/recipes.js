@@ -14,13 +14,21 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-  const { title, ingredients, instructions } = req.body;
+  const { title, ingredients, instructions, difficulty, duration } = req.body;
   try {
+    const dif_val = parseInt(difficulty, 10);
+    const dur_val = parseInt(duration, 10);
+    console.log(dif_val);
+    console.log(dur_val);
+
     const { rows } = await pool.query(
-      'INSERT INTO recipes(title, ingredients, instructions) VALUES ($1, $2, $3) RETURNING *',
-      [title, ingredients, instructions]
+      'INSERT INTO recipes(title, ingredients, instructions, difficulty, duration) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+      [title, ingredients, instructions, dif_val, dur_val]
     );
-    res.status(201).json(rows[0]);
+    // debugging
+    // res.status(201).json(rows[0]);
+    
+    res.redirect('/');
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Database error' });
