@@ -71,11 +71,14 @@ Create a `.env` file in the root directory and add the following:
 
 ```
 DATABASE_URL=your_database_connection_string
+# ^ EXAMPLE: postgres://postgres:123456@localhost:5433/recipesdb
 JWT_SECRET=your_jwt_secret_key
 PORT=3000
 ```
 
 4. **Database Setup:**
+
+Create a server with a database called recipesdb in pgadmin and set the port to 5433. Use the query tool to paste and execute what is in our `backend/schema.sql` to create the necessary tables. If needed, the username is `postgres`, the password is `123456`, and the host name/address should be `localhost`.
 
 ```bash
 # Add your database setup commands here
