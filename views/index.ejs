@@ -45,7 +45,46 @@
                     <div class="recipes">
                         <% recipes.forEach(r => { %>
                             <div class="recipe-card">
-                                <h3><a href="/recipes/<%= r.id %>"><%= r.title %></a></h3>
+                                <div class="recipe-image">Image</div>
+                                <div class="recipe-content">
+                                    <div class="recipe-header">
+                                        <h3><a href="/recipes/<%= r.id %>"><%= r.title %></a></h3>
+                                        
+                                        <% if (r.duration < 20) { %>
+                                        <h3>Estimated time: 10 minutes</h3>
+                                        <% } else if (r.duration < 30) { %>
+                                        <h3>Estimated time: 20 minutes</h3>
+                                        <% } else if (r.duration < 45) { %>
+                                        <h3>Estimated time: 30 minutes</h3>
+                                        <% } else if (r.duration < 60) { %>
+                                        <h3>Estimated time: 45 minutes</h3>
+                                        <% } else if (r.duration < 120) { %>
+                                        <h3>Estimated time: 1 hour</h3>
+                                        <% } else if (r.duration < 240) { %>
+                                        <h3>Estimated time: 2 hours</h3>
+                                        <% } else { %>
+                                        <h3>Estimated time: 4+ hours</h3>
+                                        <% } %>
+                                        
+                                        <% if (r.difficulty == 1) { %>
+                                        <h3>Difficulty Level: &#11088</h3>
+                                        <% } else if (r.difficulty == 2) { %>
+                                        <h3>Difficulty Level: &#11088&#11088</h3>
+                                        <% } else if (r.difficulty == 3) { %>
+                                        <h3>Difficulty Level: &#11088&#11088&#11088</h3>
+                                        <% } else if (r.difficulty == 4) { %>
+                                        <h3>Difficulty Level: &#11088&#11088&#11088&#11088</h3>
+                                        <% } else { %>
+                                        <h3>Difficulty Level: &#11088&#11088&#11088&#11088&#11088</h3>
+                                        <% } %>
+                                    </div>
+                                    <div class="recipe-information">
+                                        <h3 style="margin-top: 20px; font-size: 24px;">Ingredients</h3>
+                                        <h3 style="margin-top: 10px; margin-bottom: 10px; font-weight: 400;"><%= r.ingredients %></h3>
+                                        <h3 style="font-size: 24px;">Instructions</h3>
+                                        <h3 style="margin-top: 10px; margin-bottom: 20px; font-weight: 400;"><%= r.instructions %></h3>
+                                    </div>
+                                </div>
                             </div>
                         <% }) %>
                     </div>

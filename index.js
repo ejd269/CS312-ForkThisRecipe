@@ -26,7 +26,7 @@ app.use("/recipes", recipesRouter);
 // Routes
 app.get("/", async (req, res) => {
         try {
-                const { rows } = await pool.query('SELECT id, title FROM recipes ORDER BY id DESC');
+                const { rows } = await pool.query('SELECT * FROM recipes ORDER BY id DESC');
                 res.render("index", { recipes: rows });
         } catch (err) {
                 console.error(err);
@@ -36,7 +36,7 @@ app.get("/", async (req, res) => {
 
 app.post("/", async (req, res) => {
         try {
-                const { rows } = await pool.query('SELECT id, title FROM recipes ORDER BY id DESC');
+                const { rows } = await pool.query('SELECT * FROM recipes ORDER BY id DESC');
                 res.render("index", { recipes: rows });
         } catch (err) {
                 console.error(err);
@@ -45,7 +45,7 @@ app.post("/", async (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-	res.render("submit");
+        res.render("submit");
 });
 
 app.post("/login", (req, res) => {

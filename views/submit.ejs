@@ -45,7 +45,7 @@
             <!-- form section -->
             <div id="content">
                 <h2>Submit a Recipe</h2>
-                <form id="recipe-form" action="/recipes" method="post" enctype="multipart/form-data">
+                <form id="recipe-form" action="/recipes" method="post">
                     <!-- bunch of different divs for CSS and flexbox styling -->
                     <div id="left-side">
                         <div id="section-one">
@@ -63,27 +63,27 @@
                                 <input type="file" id="upload" name="upload" style="width: 60%; margin-top: 17px; margin-left: 10px;" accept="image">
                             </div>
                             <div id="cooktime-div">
-                                <label style="margin-top: 20px;" for="cook-time">Cooking time:</label>
-                                    <select name="cooktime" id="cooktime" style="margin-top: 18px; margin-left: 10px; height: 40px; width: 51%;">
-                                        <option value="">Select a time</option>
-                                        <option value="10">10 minutes</option>
-                                        <option value="20">20 minutes</option>
-                                        <option value="30">30 minutes</option>
-                                        <option value="45">45 minutes</option>
-                                        <option value="60">1 hour</option>
-                                        <option value="120">2 hours</option>
-                                        <option value="240">4+ hours</option>
+                                <label style="margin-top: 20px;" for="duration">Cooking Time:</label>
+                                    <select name="duration" id="duration" style="margin-top: 18px; margin-left: 10px; height: 40px; width: 51%;">
+                                        <option value=''>Select a time</option>
+                                        <option value='10'>10 minutes</option>
+                                        <option value='20'>20 minutes</option>
+                                        <option value='30'>30 minutes</option>
+                                        <option value='45'>45 minutes</option>
+                                        <option value='60'>1 hour</option>
+                                        <option value='120'>2 hours</option>
+                                        <option value='240'>4+ hours</option>
                                     </select>
                             </div>
                             <div id="difficulty-div" style="margin-top: 20px">
                                 <label for="difficulty">Difficulty Level:</label>
                                     <select name="difficulty" id="difficulty" style="margin-left: 10px; height: 40px; width: 51%;">
-                                        <option value="">Select a rating</option>
-                                        <option value="1">&#11088</option>
-                                        <option value="2">&#11088&#11088</option>
-                                        <option value="3">&#11088&#11088&#11088</option>
-                                        <option value="4">&#11088&#11088&#11088&#11088</option>
-                                        <option value="5">&#11088&#11088&#11088&#11088&#11088</option>
+                                        <option value=''>Select a rating</option>
+                                        <option value='1'>&#11088</option>
+                                        <option value='2'>&#11088&#11088</option>
+                                        <option value='3'>&#11088&#11088&#11088</option>
+                                        <option value='4'>&#11088&#11088&#11088&#11088</option>
+                                        <option value='5'>&#11088&#11088&#11088&#11088&#11088</option>
                                     </select>
                             </div>
                         </div>
